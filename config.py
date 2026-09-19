@@ -6,12 +6,15 @@ APP_TITLE = "Smart File Organizer"
 HISTORY_PATH = Path.home() / ".smart_file_organizer_history.json"
 
 CATEGORIES = {
-    "Images": {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".svg", ".webp", ".ico"},
-    "Documents": {".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt", ".xls", ".xlsx", ".ppt", ".pptx", ".csv"},
-    "Videos": {".mp4", ".mov", ".avi", ".mkv", ".wmv", ".webm", ".flv"},
-    "Audio": {".mp3", ".wav", ".flac", ".aac", ".ogg", ".m4a", ".wma"},
-    "Archives": {".zip", ".rar", ".7z", ".tar", ".gz", ".bz2"},
-    "Code": {".py", ".js", ".ts", ".html", ".css", ".java", ".c", ".cpp", ".h", ".json", ".xml", ".sql"},
+    "Images": {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp", ".svg"},
+    "Videos": {".mp4", ".mkv", ".avi", ".mov", ".webm"},
+    "Audio": {".mp3", ".wav", ".flac", ".aac", ".ogg"},
+    "Documents": {".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt"},
+    "Spreadsheets": {".xls", ".xlsx", ".csv"},
+    "Presentations": {".ppt", ".pptx"},
+    "Archives": {".zip", ".rar", ".7z", ".tar", ".gz"},
+    "Applications": {".exe", ".msi"},
+    "Code": {".py", ".js", ".html", ".css", ".java", ".cpp", ".c", ".json"},
 }
 
 

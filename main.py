@@ -125,9 +125,18 @@ class OrganizerApp(tk.Tk):
                 elif event == "undone":
                     restored, errors = payload
                     self.last_moves = []
+                    self.plans = []
+                    self.preview.configure(state="normal")
+                    self.preview.delete("1.0", "end")
+                    self.preview.configure(state="disabled")
+                    self.progress.set(0)
                     self._set_busy(False)
+                    self.organize_button.configure(state="disabled")
                     self.undo_button.configure(state="disabled")
-                    self.status.set(f"Undo complete: restored {restored} file(s).")
+                    self.status.set(
+                        f"Undo complete: restored {restored} file(s). "
+                        "Click Analyze to scan the folder again."
+                    )
                     if errors:
                         self._log("\n".join(errors))
                 elif event == "error":
