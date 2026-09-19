@@ -80,6 +80,14 @@ def save_history(moves: list[dict[str, str]], history_path: Path = HISTORY_PATH)
     history_path.write_text(json.dumps(moves, indent=2), encoding="utf-8")
 
 
+def clear_history(history_path: Path = HISTORY_PATH) -> None:
+    """Remove persisted undo history after a completed undo."""
+    try:
+        Path(history_path).unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
 def load_history(history_path: Path = HISTORY_PATH) -> list[dict[str, str]]:
     try:
         data = json.loads(Path(history_path).read_text(encoding="utf-8"))
@@ -92,6 +100,8 @@ def undo(moves: Iterable[dict[str, str]]) -> tuple[int, list[str]]:
     """Move files back where possible, never overwriting an existing file."""
     restored = 0
     errors = []
+    moves = list(moves)
+    category_directories = {Path(record["destination"]).parent for record in moves}
     for record in reversed(list(moves)):
         source = Path(record["source"])
         destination = Path(record["destination"])
@@ -107,4 +117,10 @@ def undo(moves: Iterable[dict[str, str]]) -> tuple[int, list[str]]:
             restored += 1
         except (OSError, shutil.Error) as error:
             errors.append(f"Error restoring {destination.name}: {error}")
+    for directory in sorted(category_directories, key=lambda path: len(path.parts), reverse=True):
+        try:
+            directory.rmdir()
+        except OSError:
+            # Keep directories that contain pre-existing or failed files.
+            pass
     return restored, errors

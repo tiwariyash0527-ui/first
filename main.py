@@ -9,7 +9,7 @@ from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 from config import APP_TITLE
-from organizer import FilePlan, analyze_folder, load_history, organize, save_history, undo
+from organizer import FilePlan, analyze_folder, clear_history, load_history, organize, save_history, undo
 
 
 class OrganizerApp(tk.Tk):
@@ -106,6 +106,8 @@ class OrganizerApp(tk.Tk):
 
     def _undo_worker(self, moves: list[dict[str, str]]) -> None:
         result = undo(moves)
+        if not result[1]:
+            clear_history()
         self.events.put(("undone", result))
 
     def _process_events(self) -> None:
