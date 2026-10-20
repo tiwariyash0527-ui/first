@@ -1,0 +1,51 @@
+@font-face {
+    font-family: hehe;
+    src: url(./Game\ Of\ Squids.otf);
+}
+*{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+}
+html.body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 10px ;
+    font-weight: 50px;
+    font-family: hehe;
+}
+.papa{
+   text-align: center;
+   border: 2px solid gray;
+   max-width: 2000px;
+   margin: 30px 600px;
+   box-shadow: 5px;
+   border-radius: 20px;
+}
+button{
+    padding: 7px 50px;
+    margin: 20px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+#pta{
+    padding: 15px;
+    border-radius: 20px;
+}
+#nhi{
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    left: 760px;
+}
+img{
+}

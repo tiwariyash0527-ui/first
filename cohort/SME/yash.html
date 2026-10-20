@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+  $("#li").click(function(){
+    $("#lali").animate({left: '+=250px'});
+  });
+});
+       $(document).ready(function(){
+  $("#la").click(function(){
+    $("#lala").animate({height: 'toggle'});
+  });
+});
+      $(document).ready(function(){
+  $("#ani").click(function(){
+    var div = $("#anim");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+  });
+});
+      $(document).ready(function(){
+        $("#hello").click(function(){
+            var div = $("#heelo");
+            div.animate({left:'800px'} , "slow");
+            div.animate({fontSize : '+=50px'} , "slow");
+        });
+      });
+    </script>
+</head>
+<body>
+    <button id="li" style="color: black;">Start animate</button>
+    <div id="lali"
+        style="background:#98bf21;height:100px;width:100px;position:absolute;">
+    </div>
+    <div id="lala"
+    style="background: red;height:100px;width:100px;position:absolute; position: absolute; top: 250px;" >
+    </div>
+    <button id="la" style="color: black;">toggle</button>
+    <button id="ani" style="color: black;">animate</button>
+    <div
+    style="background:blue;height:100px;width:100px;position:absolute; position: absolute; top: 500px;" id="anim">
+    </div>
+    <button id="hello" style="color: black;">hello</button>
+    <div
+    style="background:pink;height:100px;width:200px;position:absolute; position: absolute; top: 500px; left: 400px;" id="heelo">Hello
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.T.S.U</title>
+    <link rel="stylesheet" href="./lol.css">
+</head>
+<body>
+    <script>
+        function validateform(){
+            let name = document.forms["SignUp"]["sname"].value;
+            if (name == " "){
+                alert("Please Fillout name");
+                return false;
+            } else if (name.length < 3){
+                alert("There should be atleast 3 characters in Fullname");
+                return false;
+            }
+            let rollNo = document.forms["SignUp"]["sroll"].value;
+            if (rollNo == ""){
+                alert("please Fillout Rollno:");
+                return false;
+            } else if (rollNo.length < 5){
+                alert("There should be atleast 5 characters RollNo");
+                return false;
+            }
+            let Contact = document.forms["SignUp"]["contact"] ;
+            if ( Contact == ""){
+                alert("Please fillout the contact no:");
+                return false;
+            } else if (Contact.length < 10){
+                alert("There should be atleast 10 characters ")
+            }
+            let password = document.forms["SignUp"]["password"];
+            if (password == ""){
+               alert("Please fillout the password");
+               return false;
+            } else if (password.length < 10){
+                alert("There should be atleast 10 characters in password");
+                return false;
+            }
+        }
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over "
+}
+function uppercase(){
+    let x = document.getElementById("sname");
+    x.value = x.value.toUpperCase();
+}
+    </script>
+<h1 id="no">SignUp</h1><br>
+<H1>Lamrin Tech Skills University</H1>
+<div class="papa">
+ <form name="SignUp" method="post" onsubmit="return validateform()">
+    <div class="mami">
+        <div id="pta">
+            Fullname<br><input type="text" placeholder="Enter your fullname" id="sname" name="sname" oninput="uppercase()"><br>
+        </div>
+        <div id="pta">
+            Email<br><input type="email" id="lol" placeholder="Enter your Email" required><br>
+        </div>
+        <div id="pta">
+            Contact no: <br><input type="number" placeholder="Enter your mobile no." name="contact">
+        </div>
+        <div id="pta">
+            Password <br><input type="password" placeholder="Enter your password" name="password">
+        </div>
+        <div id="pta">
+            confirm Password <br><input type="password" placeholder="Enter your password again">
+        </div>
+        <div id="pta">
+            Roll no: <br><input type="number" placeholder="Enter your Roll no " name="sroll">
+        </div>
+    <div id="nhi"><small><a href="google">Forgot password</a><br></small></div>
+    </div><br>
+    <button type="submit" id="log">Login</button>
+ </form>
+</div>
+<div id="box"
+style="width:200px;height:100px;padding:16px;border:1px solid #000;">
+Move mouse over this box!
+</div>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over </div>
+</body>
+</html>

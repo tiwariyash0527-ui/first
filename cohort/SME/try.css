@@ -1,0 +1,150 @@
+@font-face {
+    font-family: hehe;
+    src: url(./Game\ Of\ Squids.otf);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing:border-box ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.head{
+    background-color: #F3EFE6;
+    color: #376130;
+    padding: 100px 20px;
+    p{
+    font-style: italic;
+}
+}
+.sec1{
+    padding: 50px 30px;
+    h2{
+       margin-bottom: 20px;
+       font-weight: 700;
+    }
+    p{
+        color: gray;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+.sec2{
+    background-color: rgb(178, 231, 243);
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin:  auto;
+}
+.card{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       max-width: 650px;
+       height: 135px;
+       margin:  auto;
+}
+.car{
+        background-color: white;
+        padding: 10px 15px;
+
+}
+ h2{
+        font-family: hehe;
+        text-align: center;
+    }
+.sec3{
+    padding: 30px 40px;
+    margin: 2px;
+    text-align: center;
+    max-width: 1200px;
+}
+.lala{
+    background-color: palegoldenrod;
+    padding: 30px 40px;
+    margin: 1px;
+    max-width: 400px;
+
+}
+.devv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    height: 210px;
+    margin: auto;
+
+}
+.dev{
+    background-color: white;
+    padding: 10px 15px;
+}
+.lala1{
+    background-color: palegoldenrod;
+    padding: 30px 40px;
+    margin: 1px;
+    max-width: 400px;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    height: 210px;
+    margin: auto;
+
+}
+.skil{
+    background-color: white;
+    padding: 10px 15px;
+}
+.sec4{
+     background-color: rgba(226, 157, 243, 0.507);
+    padding: 30px 40px;
+    margin: auto;
+    text-align: center;
+    max-width: 1200px;
+}
+.yash{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    height: 150px;
+    margin: auto;
+}
+.ys{
+      background-color: white;
+      padding: 10px 15px;
+      font-style: italic;
+}
+.sec5{
+      background-color: rgba(130, 234, 179, 0.507);
+    padding: 30px 40px;
+    margin: auto;
+    text-align: center;
+    max-width: 1200px;
+}
+.claa{
+      display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    height: 150px;
+    margin: auto;
+}
+.cl{
+    background-color: white;
+      padding: 10px 15px;
+      font-style: italic;
+}
+
+footer{
+     background-color: #12344d;
+     color: white;
+    padding: 40px 20px;
+}
